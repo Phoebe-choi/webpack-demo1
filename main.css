@@ -1,387 +1,544 @@
-* {
-  margin: 0;
-  padding: 0;
+*
+{
+    margin: 0;
+    padding: 0;
 }
-body{
-  background: #efefef;
-  margin: 0;
-  font-family: "微软雅黑";
+body
+{
+    font-family: '微软雅黑';
+
+    margin: 0;
+
+    background: #efefef;
 }
-a{
-  color: inherit; /*继承父级颜色*/
-  text-decoration: none;
+a
+{
+    text-decoration: none;
+
+    color: inherit; /*继承父级颜色*/
 }
-hr{
-  height: 0;
-  border: none;
-  border-top: 1px solid #B6B8BD;
+hr
+{
+    height: 0;
+
+    border: none;
+    border-top: 1px solid #b6b8bd;
 }
-ol>li{
-  list-style: none;
+ol > li
+{
+    list-style: none;
 }
-h2,h3,h4,h5,h6{
-  font-weight: normal;
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-weight: normal;
 }
-.clearfix::after{
-  content: '';
-  display: block;
-  clear: both;
+.clearfix::after
+{
+    display: block;
+    clear: both;
+
+    content: '';
 }
-[data-x].active{
+[data-x].active
+{
     outline: 5px solid red;
 }
-[data-x].offset{
+[data-x].offset
+{
     transform: translateY(80px);
 }
-[data-x]{
+[data-x]
+{
+    transition: all .5s;
     transform: translateY(0);
-    transition: all 0.5s;
 }
-@keyframes slideUp{
-    0%{
+@keyframes slideUp
+{
+    0%
+    {
         transform: translateY(-30px);
     }
-    100%{
+    100%
+    {
         transform: translateY(0);
     }
 }
-.icon {
- width: 1em; height: 1em;
- vertical-align: -0.15em;
- fill: currentColor;
- overflow: hidden;
+.icon
+{
+    overflow: hidden;
+
+    width: 1em;
+    height: 1em;
+
+    vertical-align: -.15em;
+
+    fill: currentColor;
 }
-.site-welcome{
-  display:none;
-  position:fixed;
-  top:0;
-  left: 0;
-  width:100%;
-  height: 100%;
-  background-color: #EFEFEF;
-  z-index: 10;
-  justify-content: center;
-  align-items: center;
-}
-.site-welcome.active{
-  display: flex;
-}
-.topNavBar{
-    padding: 16px 0 16px 0;
-    position: fixed; /*rs-cover相对屏幕固定，脱离文档流*/
-    top:0;
-    left:0;
+.site-welcome
+{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    display: none;
+
     width: 100%;
-    transition: all 0.5s;
+    height: 100%;
+
+    background-color: #efefef;
+
+    justify-content: center;
+    align-items: center;
+}
+.site-welcome.active
+{
+    display: flex;
+}
+.topNavBar
+{
+    position: fixed; /*rs-cover相对屏幕固定，脱离文档流*/
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 16px 0 16px 0;
+
+    transition: all .5s;
+
     color: #b7b7b7;
 }
-.topNavBar.sticky{
-    background-color: white;
-    padding: 10px 0;
+.topNavBar.sticky
+{
     z-index: 1;
-    box-shadow: -2px 15px 20px -13px rgba(0,0,0,0.75);
+
+    padding: 10px 0;
+
     color: #3d4451;
+    background-color: white;
+    box-shadow: -2px 15px 20px -13px rgba(0,0,0,.75);
 }
-.topNavBar-inner{
+.topNavBar-inner
+{
     padding: 0 16px;
 }
-.topNavBar nav>ul{
-    list-style:none;
+.topNavBar nav > ul
+{
     margin: 0;
-    padding: 0;  
+    padding: 0;
+
+    list-style: none;
 }
-.topNavBar nav>ul>li{
-    float: left;
-    margin-left: 17px;
-    margin-right: 17px;
+.topNavBar nav > ul > li
+{
     position: relative;
+
+    float: left;
+
+    margin-right: 17px;
+    margin-left: 17px;
 }
-.topNavBar nav>ul>li>a{
+.topNavBar nav > ul > li > a
+{
     font-size: 13px;
-    color: inherit;
     font-weight: bold;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
+
+    position: relative;
+
+    display: block; /*生成一个块元素盒*/
+
     padding-top: 8px;
     padding-bottom: 5px;
-    display: block; /*生成一个块元素盒*/
-    position: relative;
+
+    color: inherit;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
 }
-.topNavBar nav>ul>li.active>a::after,
-.topNavBar nav>ul>li.highlight>a::after{
-    content: '';
-    display: block;
+.topNavBar nav > ul > li.active > a::after,
+.topNavBar nav > ul > li.highlight > a::after
+{
     position: absolute;
-    top:100%;
+    top: 100%;
     left: 0;
-    width: 100%;
-    background-color:#e8676b; 
-    height: 3px;
-    animation: menuSlide .3s;
-}
-@keyframes menuSlide{
-    0%{
-        width:0;
-    }
-    100%{
-        width:100%;
-    }
-}
-.topNavBar .submenu{
-    list-style-type: none;
-    display: none;
-    position: absolute;
-    right: 0;
-    top:100%;
-    background-color:#FFFFFF;
-    color: #3d4451;
-    box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
-}
-.topNavBar li.active> .submenu{
+
     display: block;
+
+    width: 100%;
+    height: 3px;
+
+    content: '';
+    animation: menuSlide .3s;
+
+    background-color: #e8676b;
+}
+@keyframes menuSlide
+{
+    0%
+    {
+        width: 0;
+    }
+    100%
+    {
+        width: 100%;
+    }
+}
+.topNavBar .submenu
+{
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    display: none;
+
+    list-style-type: none;
+
+    color: #3d4451;
+    background-color: #fff;
+    box-shadow: 0 1px 4px -1px rgba(0,0,0,.75);
+}
+.topNavBar li.active > .submenu
+{
+    display: block;
+
     animation: submenuSlide .3s;
 }
-@keyframes submenuSlide{
-    0%{
-        margin-right: 100%; 
+@keyframes submenuSlide
+{
+    0%
+    {
+        margin-right: 100%;
     }
-    100%{
-        margin-right: 0%; 
+    100%
+    {
+        margin-right: 0;
     }
 }
-.topNavBar .submenu>li{
-    white-space: nowrap;
-    padding: 4px 16px;
+.topNavBar .submenu > li
+{
     font-size: 15px;
+
+    padding: 4px 16px;
+
     cursor: pointer;
+    white-space: nowrap;
 }
-.topNavBar .logo{
-    font-size:26px;
-    font-family: "Arial Rounded MT Bold";
+.topNavBar .logo
+{
+    font-family: 'Arial Rounded MT Bold';
+    font-size: 26px;
+
     padding-top: 4px;
     padding-bottom: 4px;
 }
-.topNavBar .logo .rs{
+.topNavBar .logo .rs
+{
+    font-weight: bold;
+
     margin-right: 4px;
+
     color: #e8676b;
-    font-weight: bold;
 }
-.topNavBar .logo .card{
+.topNavBar .logo .card
+{
+    font-weight: bold;
+
     margin-right: 4px;
+
     color: #9a9da2;
-    font-weight: bold;
 }
-.banner{
+.banner
+{
     height: 515px;
-    background-image:url(./img/rs-cover1.jpg);
+
+    background-image: url(./img/rs-cover1.jpg);
     background-position: center center; /*rs-cover居中*/
     background-size: cover; /*rs-cover自适应*/
 }
-.banner .mask{
-    height:515px;
-    background-color: rgba(0, 0, 0, 0.7);
+.banner .mask
+{
+    height: 515px;
 
+    background-color: rgba(0, 0, 0, .7);
 }
-.mycard{
+.mycard
+{
     max-width: 940px;
-    margin-left: auto;
+    margin-top: -345px;
     margin-right: auto;
-    background-color: #ffffff;
-    margin-top:-345px;
-    box-shadow: 0px 1px 8px -1px rgba(0,0,0,0.50);
+    margin-left: auto;
+
+    background-color: #fff;
+    box-shadow: 0 1px 8px -1px rgba(0,0,0,.50);
 }
-.mycard .welcome{
-    background-color: #e6686a;
-    color: white;
-    display: inline-block;
-    padding: 4px 14px;
-    line-height: 22px;
+.mycard .welcome
+{
+    font-family: 'Calibri';
     font-weight: bold;
-    font-family: "Calibri";
+    line-height: 22px;
+
     position: relative;/*相对定位，使triangle脱离文档流*/
-}
-.mycard .welcome .triangle{
-    display: block;/*使span变成一个块元素*/
-    border:10px solid transparent;
-    width:0;
-    border-left-color:#e6686a;
-    border-top-width:0;
-    position: absolute;/*绝对定位，使triangle脱离文档流*/
-    left: 4px;
-    top:100%;
-  }
-  .mycard .pic{
-    float: left;
-  }
-  .mycard .text{
-    float: left;
-    margin-left: 65px;
-    width: 470px;
-  }
-  .mycard .text h1{
-    margin-top: 19px;
-    font-family: "Yu Gothic";
-  }
-  .mycard .text hr{
-    margin:18px 0;
-  }
-  .mycard .text p{
-    margin-top: -3px;
-    color: #3d4451;
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
-  .mycard .picAndText{
-    padding: 48px 48px 40px 48px;
-  }
-  .mycard dl dt,
-  .mycard dl dd{
-    float: left;
-    padding: 6px 0;
-    color: #3d4451;
-    font-size: 15px;
-  }  
-.mycard dl dt{
-  width: 30%;
-  font-weight: bold;
-}
-.mycard dl dd{
-  width: 70%;
-  color: #9DA0A7;
-}
-.mycard>footer.media{
-    background-color: #e6686a;
-    text-align: center;
-}
-.mycard>footer.media>a{
+
     display: inline-block;
-    width:46px;
-    padding: 11px 0;
-    border-radius: 50%;
+
+    padding: 4px 14px;
+
+    color: white;
+    background-color: #e6686a;
+}
+.mycard .welcome .triangle
+{
+    position: absolute;/*绝对定位，使triangle脱离文档流*/
+    top: 100%;
+    left: 4px;
+
+    display: block;/*使span变成一个块元素*/
+
+    width: 0;
+
+    border: 10px solid transparent;
+    border-top-width: 0;
+    border-left-color: #e6686a;
+}
+.mycard .pic
+{
+    float: left;
+}
+.mycard .text
+{
+    float: left;
+
+    width: 470px;
+    margin-left: 65px;
+}
+.mycard .text h1
+{
+    font-family: 'Yu Gothic';
+
+    margin-top: 19px;
+}
+.mycard .text hr
+{
+    margin: 18px 0;
+}
+.mycard .text p
+{
+    font-size: 16px;
+
+    margin-top: -3px;
+
+    letter-spacing: 1px;
+
+    color: #3d4451;
+}
+.mycard .picAndText
+{
+    padding: 48px 48px 40px 48px;
+}
+.mycard dl dt,
+.mycard dl dd
+{
+    font-size: 15px;
+
+    float: left;
+
+    padding: 6px 0;
+
+    color: #3d4451;
+}
+.mycard dl dt
+{
+    font-weight: bold;
+
+    width: 30%;
+}
+.mycard dl dd
+{
+    width: 70%;
+
+    color: #9da0a7;
+}
+.mycard > footer.media
+{
+    text-align: center;
+
+    background-color: #e6686a;
+}
+.mycard > footer.media > a
+{
+    display: inline-block;
+
+    width: 46px;
     margin: 20px 20px;
+    padding: 11px 0;
+
+    border-radius: 50%;
 }
-.mycard>footer.media>a:hover{
-    background-color:  #D05C60;
+.mycard > footer.media > a:hover
+{
+    background-color: #d05c60;
 }
-.mycard svg{
+.mycard svg
+{
     width: 22px;
     height: 22px;
-    fill: white;
+
     vertical-align: top;
+
+    fill: white;
 }
-body>main .downloadResume-wrapper{
-    text-align:center;
-}
-body>main .downloadResume{
-    font-size: 15px;
-    line-height:16px;
-    padding: 21px 70px;
-    border: 1px solid #CBCDCF;
-    display: inline-block;
-    letter-spacing: 1px;
-    border-radius: 2px;
-    color: #3d4451;
-    font-weight: bold;
-    margin: 36px 0;
-}
-body>main .downloadResume:hover{
-  box-shadow: 0px 4px 14px -4px rgba(0,0,0,0.5);
-  transition: box-shadow 0.3s;
-}
-.selfInroduction{
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
+body > main .downloadResume-wrapper
+{
     text-align: center;
-    line-height: 1.5px;
-    font-family: "微软雅黑 Light";
 }
-section.portfolio{
+body > main .downloadResume
+{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 16px;
+
+    display: inline-block;
+
+    margin: 36px 0;
+    padding: 21px 70px;
+
+    letter-spacing: 1px;
+
+    color: #3d4451;
+    border: 1px solid #cbcdcf;
+    border-radius: 2px;
+}
+body > main .downloadResume:hover
+{
+    transition: box-shadow .3s;
+
+    box-shadow: 0 4px 14px -4px rgba(0,0,0,.5);
+}
+.selfInroduction
+{
+    font-family: '微软雅黑 Light';
+    line-height: 1.5px;
+
+    max-width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+}
+section.portfolio
+{
     margin-bottom: 100px;
 }
 section.skillBar,
-section.portfolio{
+section.portfolio
+{
     max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
 }
-section.skillBar>h2,
-section.portfolio>h2{
-  text-align: center;
-  color: #3d4451;
-  line-height: 1.2;
-  font-weight: 600;
-  letter-spacing: 2px;
+section.skillBar > h2,
+section.portfolio > h2
+{
+    font-weight: 600;
+    line-height: 1.2;
+
+    text-align: center;
+    letter-spacing: 2px;
+
+    color: #3d4451;
 }
-section.skillBar h3{
-  font-size: 14px;
-  line-height: 1.1;
-  padding-right: 40px;
+section.skillBar h3
+{
+    font-size: 14px;
+    line-height: 1.1;
+
+    padding-right: 40px;
 }
-section.skillBar>ol{
-  background-color: white;
-  box-shadow: 0px 1px 8px -1px rgba(0,0,0,0.50);
-  padding: 42px 50px 9px;
-  margin-top: 32px;
+section.skillBar > ol
+{
+    margin-top: 32px;
+    padding: 42px 50px 9px;
+
+    background-color: white;
+    box-shadow: 0 1px 8px -1px rgba(0,0,0,.50);
 }
-section.skillBar>ol>li{
-  float: left;
-  width: 48%;
-  color: #3d4451;
-  box-sizing: border-box; /*更改宽度默认的 CSS 盒子模型*/
+section.skillBar > ol > li
+{
+    float: left;
+
+    box-sizing: border-box; /*更改宽度默认的 CSS 盒子模型*/
+    width: 48%;
+
+    color: #3d4451;
 }
-section.skillBar>ol>li:nth-child(even){  /*只更改li右侧*/
-  float: right;
+section.skillBar > ol > li:nth-child(even)
+{
+    /*只更改li右侧*/
+    float: right;
 }
-section.skillBar .progressBar{
-  height: 5px;
-  background-color: #FAE1E1;
-  border-radius: 5px;
-  margin:6px 0 45px;
-  overflow: hidden;
+section.skillBar .progressBar
+{
+    overflow: hidden;
+
+    height: 5px;
+    margin: 6px 0 45px;
+
+    border-radius: 5px;
+    background-color: #fae1e1;
 }
-section.skillBar .progressBar> .progress{
-  height: 100%;
-  background-color: #e6686a;   
-  border-radius: 5px;
-  transform: translateX(0);
-  transition: all 1s;
+section.skillBar .progressBar > .progress
+{
+    height: 100%;
+
+    transition: all 1s;
+    transform: translateX(0);
+
+    border-radius: 5px;
+    background-color: #e6686a;
 }
-section.skillBar.offset .progress{
-  transform: translateX(-100%);
+section.skillBar.offset .progress
+{
+    transform: translateX(-100%);
 }
-section.portfolio{
-  text-align: center;
-  margin-bottom: 100px;
-  max-width: 815px;
+section.portfolio
+{
+    max-width: 815px;
+    margin-bottom: 100px;
+
+    text-align: center;
 }
-section.portfolio h2{
-  margin-bottom: 32px;
+section.portfolio h2
+{
+    margin-bottom: 32px;
 }
-section.portfolio .swiper-container {
-  width: 750px;
-  height: 520px;
+section.portfolio .swiper-container
+{
+    width: 750px;
+    height: 520px;
 }
-section.portfolio .swiper-slide{
-  background: white;
+section.portfolio .swiper-slide
+{
+    background: white;
 }
 section.portfolio .swiper-button-prev,
-section.portfolio .swiper-button-next{
-  background-color: white;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  right: 100%;
-  left: auto; 
-  margin: auto;
+section.portfolio .swiper-button-next
+{
+    right: 100%;
+    left: auto;
+
+    width: 58px;
+    height: 58px;
+    margin: auto;
+
+    border-radius: 50%;
+    background-color: white;
 }
-section.portfolio .swiper-button-next{
-  right: auto;
-  left: 100%; 
+section.portfolio .swiper-button-next
+{
+    right: auto;
+    left: 100%;
 }
-
-
-    
-
-
