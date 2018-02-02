@@ -16,3 +16,5 @@
 #### 立即执行函数
 用`!function(){}.call`把js代码的全局变量包成局部变量
 
+#### 添加MVC的V和C
+用view和controller把js代码分成模块
