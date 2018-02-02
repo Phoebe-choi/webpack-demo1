@@ -160,8 +160,8 @@
 		<!-- Additional required wrapper -->
 		<div class="swiper-wrapper">
 		    <!-- Slides -->
-		    <img src="./img/nav.jpg" class="swiper-slide">
 		    <img src="./img/slides.jpg" class="swiper-slide">
+		    <img src="./img/nav.jpg" class="swiper-slide">
 		    <img src="./img/canvas-3.jpg" class="swiper-slide">
 		</div>
 		<!-- If we need pagination -->
@@ -173,12 +173,22 @@
 </div>
 
 		</section>
+		<section>
+			<h2>留言</h2>
+			<form id="postMessageForm" style="width: 700px; margin: 50px auto;">
+				<input type="text" name="content">
+				<input type="submit" value="提交">
+			</form>
+		</section>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+		<script src="//cdn1.lncld.net/static/js/3.5.0/av-min.js"></script>
+		<!-- 模块化 -->
 		<script src="./js/swiper.js"></script>
 		<script src="./js/auto-slide-up.js"></script>
 		<script src="./js/stick-topbar.js"></script>
 		<script src="./js/smoothl-nav.js"></script>
+		<script src="./js/message.js"></script>
 	</body>
 </html>
 
