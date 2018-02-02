@@ -11,10 +11,13 @@
 [link](http://idangero.us/swiper/get-started/)
 
 #### 模块化
-把简历的JS代码模块化分成好几个JS文件
+把简历的JS代码模块化分成多个JS文件
 
 #### 立即执行函数
 用`!function(){}.call`把js代码的全局变量包成局部变量
 
 #### 添加MVC的V和C
 用view和controller把js代码分成模块
+
+#### 添加数据库
+引入LeanCloud,添加留言板功能
