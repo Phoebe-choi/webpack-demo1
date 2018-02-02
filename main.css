@@ -362,7 +362,9 @@ section.skillBar, section.portfolio {
   margin-left: auto;
 }
 
-section.skillBar > h2, section.portfolio > h2 {
+section.skillBar > h2,
+section.message > h2,
+section.portfolio > h2 {
   font-weight: 600;
   line-height: 1.2;
   text-align: center;
@@ -448,4 +450,16 @@ section.portfolio .swiper-button-prev, section.portfolio .swiper-button-next {
 section.portfolio .swiper-button-next {
   right: auto;
   left: 100%;
+}
+
+section.message ol{
+  border-top:1px solid #ddd;
+  max-width:600px;
+  margin:0 auto;
+  margin-top:25px; 
+}
+
+section.message ol>li{
+  padding:18px;
+  border-bottom:1px solid #ddd;
 }
