@@ -419,7 +419,7 @@ section.skillBar.offset .progress {
 }
 
 section.portfolio {
-  max-width: 815px;
+  max-width: 940px;
   margin-bottom: 100px;
   text-align: center;
 }
@@ -429,34 +429,31 @@ section.portfolio h2 {
 }
 
 section.portfolio .swiper-container {
-  width: 750px;
-  height: 520px;
-}
-
-section.portfolio .swiper-slide {
-  background: white;
+  width: 940px;
+  height: 460px;
 }
 
 section.portfolio .swiper-button-prev, section.portfolio .swiper-button-next {
   right: 100%;
-  left: auto;
+  /*left: auto;*/
   width: 58px;
   height: 58px;
   margin: auto;
   border-radius: 50%;
-  background-color: white;
+  background-color:rgba(0,0,0,0.1);
 }
 
 section.portfolio .swiper-button-next {
-  right: auto;
-  left: 100%;
+  right:auto;
+  left: 93%;
 }
 
 section.message ol{
   border-top:1px solid #ddd;
-  max-width:600px;
+  max-width:940px;
   margin:0 auto;
-  margin-top:25px; 
+  margin-top:25px;
+  background-color: white;
 }
 
 section.message ol>li{
