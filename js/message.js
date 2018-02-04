@@ -52,8 +52,8 @@
 				}
 			)
 		},
-		bindEvents: function() {
-			this.form.addEventListener('submit', function(e) {
+		bindEvents: function(){
+			this.form.addEventListener('submit', (e)=> {
 				e.preventDefault()
 				this.saveMessage()
 			})
