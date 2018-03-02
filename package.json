@@ -1,0 +1,23 @@
+{
+  "name": "resume-2",
+  "version": "1.0.0",
+  "description": "#### 给简历添加轮播 - 进入 Swiper 官网 - 在页面引入 Swiper（CSS 和 JS）",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phoebe-choi/resume-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Phoebe-choi/resume-2/issues"
+  },
+  "homepage": "https://github.com/Phoebe-choi/resume-2#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}
