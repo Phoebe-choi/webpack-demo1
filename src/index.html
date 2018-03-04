@@ -3,11 +3,9 @@
   <head>
     <title>崔慧敏的个人简历</title>
 		<link rel="stylesheet" href="./loading.css">
-		<link rel="stylesheet" href="./css/main.css">
-
+		<link rel="stylesheet" href="./main.scss">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
 		<script src="//at.alicdn.com/t/font_486283_qenwxwq4ki221emi.js"></script>
-		<script src="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"></script>
   </head>
   <body>
   	<div id="topNavBar" class="topNavBar">
@@ -154,38 +152,27 @@
 		</section>
 		<section data-x class="portfolio" id="siteWorks">
 		<h2>作品集</h2>
+	 	<!--变成轮播-->
+	 	<!-- 这就是view，用户看的见的东西 -->
+	 	<!-- Slider main container -->
 <div id="mySlides">
 	<div class="swiper-container">
+		<!-- Additional required wrapper -->
 		<div class="swiper-wrapper">
 		    <!-- Slides -->
 		    <img src="./img/slides.jpg" class="swiper-slide">
 		    <img src="./img/nav.jpg" class="swiper-slide">
 		    <img src="./img/canvas-3.jpg" class="swiper-slide">
 		</div>
+		<!-- If we need pagination -->
 		<div class="swiper-pagination"></div>
 	</div>
 		<!-- If we need navigation buttons -->
 		<div class="swiper-button-prev"></div>
 		<div class="swiper-button-next"></div>
 </div>
+
 		</section>
-		<section class="myInterests"></section>
-			<h2>兴趣爱好</h2>
-			<div class="section-box">
-			<p>我对许多活动感兴趣，希望我们能一起分享快乐!</p>
-			<ul class="interests-list">
-				<li>
-					<svg class="icon" aria-hidden="true">
-    				<use xlink:href="#icon-swim"></use>
-					</svg>
-				</li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-			</div>
-		</div>
 		<section class="message">
 			<h2>留言</h2>
 			<ol id="messageList">
@@ -201,17 +188,10 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
 		<script src="//cdn1.lncld.net/static/js/3.5.0/av-min.js"></script>
-		<script src="./js/View.js"></script>
-		<script src="./js/Model.js"></script>
-		<script src="./js/Controller.js"></script>
-		<!-- 模块化 -->
-		<script src="./js/swiper.js"></script>
-		<script src="./js/auto-slide-up.js"></script>
-		<script src="./js/stick-topbar.js"></script>
-		<script src="./js/smoothl-nav.js"></script>
-		<script src="./js/message.js"></script>
+		<script src="./bundle.js"></script>
 	</body>
 </html>
+
 
 
 
